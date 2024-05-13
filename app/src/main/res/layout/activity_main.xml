@@ -140,12 +140,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-
-        android:background="@color/black"
         android:weightSum="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:gravity="center"
+
+
+            android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/imgman"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_man_24"/>
+
+            <ImageView
+                android:id="@+id/imgwomen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/baseline_woman_24"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 
     </LinearLayout>
