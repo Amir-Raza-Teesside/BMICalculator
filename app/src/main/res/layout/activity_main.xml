@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     tools:context=".MainActivity">
 
 
@@ -46,7 +48,7 @@
                     android:elevation="4dp"
                     android:hint="Age"
                     android:imeOptions="actionDone"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:textAlignment="viewStart"
@@ -87,9 +89,9 @@
                     android:drawablePadding="8dp"
                     android:drawableTint="#00FF00"
                     android:elevation="4dp"
-                    android:hint="Weight"
+                    android:hint="Height"
                     android:imeOptions="actionDone"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:textAlignment="viewStart"
@@ -125,7 +127,7 @@
                     android:layout_height="50dp"
                     android:gravity="center"
                     android:text="CM"
-                    android:textColor="#000051"
+                    android:textColor="#FFFFFF"
                     android:textStyle="bold">
 
                 </TextView>
@@ -138,6 +140,7 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:weightSum="5"
@@ -146,32 +149,107 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
 
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+
+
+                android:gravity="center"
+                android:padding="4dp">
+
+                <ImageView
+                    android:id="@+id/imgman"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_manunselected_24" />
+
+                <ImageView
+                    android:id="@+id/imgwomen"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/baseline_womanunselected_24" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_margin="4dp"
-            android:gravity="center"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:padding="4dp">
 
 
-            android:padding="4dp">
+                <EditText
+                    android:id="@+id/editTextsss"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/edit_text_background"
+                    android:drawableEnd="@drawable/ic_check"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="#00FF00"
+                    android:elevation="4dp"
+                    android:hint="Weight"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
 
-        <ImageView
-            android:id="@+id/imgman"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baseline_man_24"/>
 
-            <ImageView
-                android:id="@+id/imgwomen"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/baseline_woman_24"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:padding="4dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="KG"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold">
+
+                </TextView>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -179,17 +257,294 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/linearLayoutsss"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingClass">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Vasslue"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+
+
+
+
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutsss">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="10kg"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+
+        </LinearLayout>
 
 
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Severly Underweight"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="15kg"
+                android:textStyle="bold|italic">
+
+            </TextView>
 
 
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Underweight"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="20kg"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Normal"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="25kg"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Over Weight"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="30kg">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Obese Level I"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="35kg">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Obese Level II"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="40kg"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="Obese Level III"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="55KG"
+                android:textStyle="bold|italic">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

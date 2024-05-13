@@ -1,5 +1,6 @@
 package com.example.bmicalculator
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,15 +23,16 @@ class MainActivity : AppCompatActivity() {
 
         men.setOnClickListener(View.OnClickListener {
 
-          men.setImageResource(R.drawable.male_selected);
-            women.setImageResource(R.drawable.female_unselected);
+          men.setImageResource(R.drawable.baseline_man_24);
+            women.setImageResource(R.drawable.baseline_womanunselected_24);
             gender = "Men";
             Toast.makeText(this, gender, Toast.LENGTH_LONG).show()
         })
 
         women.setOnClickListener(View.OnClickListener {
-            men.setColorFilter(ContextCompat.getColor(this, R.color.black));
-            women.setColorFilter(null)
+
+            men.setImageResource(R.drawable.baseline_manunselected_24);
+            women.setImageResource(R.drawable.baseline_woman_24);
             gender = "Women"
             Toast.makeText(this, gender, Toast.LENGTH_LONG).show()
         })
